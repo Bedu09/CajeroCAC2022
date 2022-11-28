@@ -128,12 +128,16 @@ def cajero():
                 elif confirma == "no":
                     print("has cancelado tu compra")            
             #8ver ultimos movimientos
+            elif opcion == 8:
+                print("#########################################")
+                print("  No disponible por el momento")
+                print("#########################################")
             #9salir de la cuenta
             elif opcion == 9:
-                print("#####################################")
-                print("    Ha salido de su cuenta")
-                print("    Gracias por utilizar nuestro servicio")
-                print("#####################################")
+                print("#########################################")
+                print("  Ha salido de su cuenta")
+                print("  Gracias por utilizar nuestro servicio")
+                print("#########################################")
         else:
             print("clave incorrecta")
     elif idioma == 2:
