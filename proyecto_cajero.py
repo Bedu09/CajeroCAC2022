@@ -108,7 +108,7 @@ def cajero():
             #7crear plazo fijo
             elif opcion == 7:
                 print("#####################################")
-                print("    Desea realizar un plazo fijo a 30 días")
+                print("    Desea realizar un plazo fijo a 30 días ?")
                 print("    tu saldo es el siguiente: " , saldo)
                 print("#####################################")
                 plazoFijo = float(input("ingrese el monto de plazo fijo: "))
@@ -129,6 +129,11 @@ def cajero():
                     print("has cancelado tu compra")            
             #8ver ultimos movimientos
             #9salir de la cuenta
+            elif opcion == 9:
+                print("#####################################")
+                print("    Ha salido de su cuenta")
+                print("    Gracias por utilizar nuestro servicio")
+                print("#####################################")
         else:
             print("clave incorrecta")
     elif idioma == 2:
