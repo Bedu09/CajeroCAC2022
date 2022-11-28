@@ -84,8 +84,26 @@ def cajero():
                 elif confirma == "no":
                     print("has cancelado tu compra")            
             #6vender dolares
-
-
+            elif opcion == 6:
+                print("#####################################")
+                print("    el precio del dolar es de $180")
+                print("    tu saldo es el siguiente: " , saldo)
+                print("#####################################")
+                ventaDolar = float(input("ingresa el monto de dolares a vender: "))
+                print("#####################################")
+                print("estas seguro de vender : u$s" , ventaDolar, " dolares ?")
+                confirma  = str(input("ingresa \n     #si para confirmar. \n     #no para cancelar "))
+                print("#####################################")
+                if confirma == "si":
+                    conversion = ventaDolar * 180
+                    saldoActual = saldo - conversion
+                    saldoDolar = saldoDolar + ventaDolar
+                    print("#####################################################")
+                    print("tu saldo en tu cuenta pesos es de: $" , saldoActual)
+                    print("tu saldo en tu cuenta dolares es de: u$s" , saldoDolar )
+                    print("#####################################################")
+                elif confirma == "no":
+                    print("has cancelado tu venta")            
             #7crear plazo fijo
             
             #8ver ultimos movimientos
@@ -98,4 +116,4 @@ def cajero():
         print("has seleccionado portugues")
     else:
         print("opcion incorrecta")
-cajero()
+cajero()        
