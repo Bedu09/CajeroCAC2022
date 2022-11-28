@@ -15,6 +15,7 @@ def cajero():
         nombre = str(input("ingresa tu nombre: "))
         saldo = float(85200)
         saldoDolar = float(0)
+        plazoFijo = float(0)
         if clave == 1234:
             print("#########################################")
             print("Bienvenido a tu cuenta", nombre, "!!")
@@ -96,8 +97,8 @@ def cajero():
                 print("#####################################")
                 if confirma == "si":
                     conversion = ventaDolar * 180
-                    saldoActual = saldo - conversion
-                    saldoDolar = saldoDolar + ventaDolar
+                    saldoActual = saldo + conversion
+                    saldoDolar = saldoDolar - ventaDolar
                     print("#####################################################")
                     print("tu saldo en tu cuenta pesos es de: $" , saldoActual)
                     print("tu saldo en tu cuenta dolares es de: u$s" , saldoDolar )
@@ -105,7 +106,27 @@ def cajero():
                 elif confirma == "no":
                     print("has cancelado tu venta")            
             #7crear plazo fijo
-            
+            elif opcion == 7:
+                print("#####################################")
+                print("    Desea realizar un plazo fijo a 30 días")
+                print("    tu saldo es el siguiente: " , saldo)
+                print("#####################################")
+                plazoFijo = float(input("ingrese el monto de plazo fijo: "))
+                print("#####################################")
+                print("estas seguro del monto: $" , plazoFijo, " Pesos ?")
+                confirma  = str(input("ingresa \n     #si para confirmar. \n     #no para cancelar "))
+                print("#####################################")
+                if confirma == "si":
+                    saldoActual = saldo - plazoFijo
+                    interes = 0.6
+                    devolucionPj = plazoFijo * interes + saldo
+                    print("#####################################################")
+                    print("tu saldo en tu cuenta pesos es de: $" , saldoActual)
+                    print("tu saldo en plazo fijo es: $" , plazoFijo )
+                    print("tu saldo en 30 dias sera de: $" , devolucionPj)
+                    print("#####################################################")
+                elif confirma == "no":
+                    print("has cancelado tu compra")            
             #8ver ultimos movimientos
             #9salir de la cuenta
         else:
